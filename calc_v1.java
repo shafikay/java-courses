@@ -1,14 +1,24 @@
 /* класс калькулятор */
 public class calc_v1{
-	private int result; /* результат вычисления */
+	private float result; /* результат вычисления */
 	/*Первый метод суммирования аргументов */
-	public void add(int ... params){
-		for(Integer param : params){
-		this.result+=param;
+	public void calcul(String operation,float first, float second){
+		switch(operation){
+		case "+": this.result=first+second;
+			     	 break;
+		case "*": this.result=first*second;
+			     	 break;
+		case "/": this.result=first/second;
+			     	 break;
+		case "-": this.result=first-second;
+			      break;
+		default: this.result=first%second; 
+				break;
+
 		}
 	}
 	/* Получения результата*/
-	public int getresult(){
+	public float getresult(){
 		return this.result; 
 		}
 	/*Очищение результата*/

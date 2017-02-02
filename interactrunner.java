@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /*запуск калькулятора, ввод с клавы*/
 public class interactrunner{
-	public static void main(String[] arg){
+	public static void main (String[] arg){
 	Scanner reader = new Scanner(System.in);
 	try {
 	calc_v1 calc = new calc_v1();
@@ -14,7 +14,7 @@ public class interactrunner{
 		String second =reader.next();
 		System.out.println("Enter operation: ");
 		String operation=reader.next();
-		calc.add(Integer.valueOf(first),Integer.valueOf(second));
+		calc.calcul(String.valueOf(operation),Float.valueOf(first),Float.valueOf(second));
 		System.out.println ("Result= "+calc.getresult());
 		calc.clearresult();
 		System.out.println("Exit: yes/no?");
